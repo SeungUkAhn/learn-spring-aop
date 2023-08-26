@@ -1,5 +1,8 @@
 package com.maicoding.learnspringaop.aopexample.business;
 
+import org.springframework.stereotype.Repository;
+
+@Repository
 public class DataService1 {
 
     public int[] retrieveData(){
