@@ -12,25 +12,25 @@ public class LoggingAspect {
 
     private Logger logger = LoggerFactory.getLogger(getClass());
 
-    @Before("execution(* com.maicoding.learnspringaop.aopexample.*.*.*(..))")
+    @Before("com.maicoding.learnspringaop.aopexample.aspects.CommonPointcutConfig.allPackageConfigUsingBean()")
     public void logMethodCallBeforeExecution(JoinPoint joinPoint){
         logger.info("Before Aspect - {} is called with args: {}", joinPoint, joinPoint.getArgs());
     }
 
-    @After("execution(* com.maicoding.learnspringaop.aopexample.*.*.*(..))")
+    @After("com.maicoding.learnspringaop.aopexample.aspects.CommonPointcutConfig.businessAndDataPackageConfig()")
     public void logMethodCallAfterExecution(JoinPoint joinPoint){
         logger.info("After Aspect - {} is executed", joinPoint);
     }
 
     @AfterThrowing(
-        pointcut = "execution(* com.maicoding.learnspringaop.aopexample.*.*.*(..))",
+        pointcut = "com.maicoding.learnspringaop.aopexample.aspects.CommonPointcutConfig.businessAndDataPackageConfig()",
         throwing = "exception")
     public void logMethodCallAfterException(JoinPoint joinPoint, Exception exception){
         logger.info("AfterThrowing Aspect - {} has thrown an exception: {}", joinPoint, exception);
     }
 
     @AfterReturning(
-        pointcut = "execution(* com.maicoding.learnspringaop.aopexample.*.*.*(..))",
+        pointcut = "com.maicoding.learnspringaop.aopexample.aspects.CommonPointcutConfig.businessAndDataPackageConfig()",
         returning = "resultValue")
     public void logMethodCallAfterSuccess(JoinPoint joinPoint, Object resultValue){
         logger.info("AfterReturning Aspect - {} successfully returned {}", joinPoint, resultValue);
