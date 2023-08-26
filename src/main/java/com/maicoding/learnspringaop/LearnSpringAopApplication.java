@@ -1,6 +1,6 @@
 package com.maicoding.learnspringaop;
 
-import com.maicoding.learnspringaop.aopexample.data.BusinessService1;
+import com.maicoding.learnspringaop.aopexample.business.BusinessService1;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;

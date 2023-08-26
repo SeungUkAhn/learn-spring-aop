@@ -1,6 +1,6 @@
-package com.maicoding.learnspringaop.aopexample.data;
+package com.maicoding.learnspringaop.aopexample.business;
 
-import com.maicoding.learnspringaop.aopexample.business.DataService1;
+import com.maicoding.learnspringaop.aopexample.data.DataService1;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;

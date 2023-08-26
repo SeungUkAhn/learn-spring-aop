@@ -1,4 +1,4 @@
-package com.maicoding.learnspringaop.aopexample.business;
+package com.maicoding.learnspringaop.aopexample.data;
 
 import org.springframework.stereotype.Repository;
 
